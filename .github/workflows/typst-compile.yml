@@ -1,31 +1,46 @@
 name: Compile, Upload and Release Typst Documents
-on:
-  workflow_dispatch:
-  push:
-    tags:
-    - '**'
-permissions:
-  contents: write
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-    - name: Compile Typst Files
-      uses: ammar-ahmed22/compile-typst-action@v1
-      with:
-        source_paths: 'cv.typ'
-        output_paths: 'cv.pdf'
-        fonts_path: 'path/to/fonts'
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: PDF
-        path: '**/*.pdf'
-    - name: Release on tag
-      uses: softprops/action-gh-release@v1
-      if: github.ref_type = 'tag'
-      with:
-        name: "${{ github.ref_name }}"
-        files: cv.pdf
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Compile Typst Files
+        uses: ammar-ahmed22/compile-typst-action@v1
+        with:
+          source_paths: 'aaron_murniadi_cv.typ'
+          output_paths: 'aaron_murniadi_cv.pdf'
+      
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aaron_murniadi_cv.pdf
+          path: aaron_murniadi_cv.pdf
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: v${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Set upload_url as an environment variable
+        run: echo "UPLOAD_URL=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
+      
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ env.UPLOAD_URL }} 
+          asset_path: aaron_murniadi_cv.pdf
+          asset_name: aaron_murniadi_cv.pdf
+          asset_content_type: application/pdf
