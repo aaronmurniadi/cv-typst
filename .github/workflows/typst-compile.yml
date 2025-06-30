@@ -17,30 +17,16 @@ jobs:
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: aaron_murniadi_cv.pdf
-          path: aaron_murniadi_cv.pdf
+          name: PDF
+          path: *.pdf
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: v${{ github.run_number }}
-          draft: false
-          prerelease: false
+      - name: Get current date
+        id: date
+        run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
 
-      - name: Set upload_url as an environment variable
-        run: echo "UPLOAD_URL=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
-      
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: github.ref_type == 'tag'
         with:
-          upload_url: ${{ env.UPLOAD_URL }} 
-          asset_path: aaron_murniadi_cv.pdf
-          asset_name: aaron_murniadi_cv.pdf
-          asset_content_type: application/pdf
+          name: "${{ github.ref_name }} — ${{ env.DATE }}"
+          files: main.pdf
