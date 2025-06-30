@@ -2,7 +2,7 @@
 
 #let section-block(title, content) = [
   #grid(
-    columns: (2fr, 12fr),
+    columns: (2fr, 10fr),
     text(size: 1.25em, style: "italic", title), content,
   )
   #v(0.5em)
@@ -54,10 +54,13 @@ year: [],
   #line(length: 100%, stroke: 1pt)
 ]
 
-#let point = text(size: 1em,weight: "bold")[#text("★")]
+#let point = text(size: 1em, weight: "bold")[#text("★")]
 
 // =============================================
 // =============================================
+
+#let today = datetime.today().display("[month repr:long] [day], [year]")
+
 
 #set par(justify: true)
 #set text(
@@ -65,7 +68,13 @@ year: [],
   number-type: "lining",
   number-width: "proportional"
 )
-#set page(paper: "a4", margin: 0.5in)
+
+
+#set page(
+  paper: "a4", 
+  margin: 0.9in,
+  header: [#text(style: "italic")[Last updated: #today]#h(1fr) ]
+)
 
 #header(
   name: [Aaron P. Murniadi],
@@ -117,35 +126,23 @@ _*Internship as Software Tester*_ (_Internship_, December 2021--December 2022)
   ]
 )
 
-#section-block(
-  [Skills],
-  [
-    #set terms(separator: [: ])
-    / Software: Git, VS Code, JetBrain’s IntelliJ, Postman, DBeaver, Office 365, Google Workspace, LaTeX.
-    / Languages: Bahasa (native), English (Intermediate Reading, Writing, Listening, Speaking).
-    / Programming: Python, Java, SQL, Golang.
-    / Operating System: Windows XP-11, MacOS, Ubuntu, Manjaro, Arch Linux, Fedora, Android.
-  ],
-)
+// #section-block(
+//   [Skills],
+//   [
+//     #set terms(separator: [: ])
+//     / Software: Git, VS Code, JetBrain’s IntelliJ, Postman, DBeaver, Office 365, Google Workspace, LaTeX.
+//     / Languages: Bahasa (native), English (Intermediate Reading, Writing, Listening, Speaking).
+//     / Programming: Python, Java, SQL, Golang.
+//     / Operating System: Windows XP-11, MacOS, Ubuntu, Manjaro, Arch Linux, Fedora, Android.
+//   ],
+// )
 
-#section-block([Education],
-  [#edu-heading(
-      department: [SMAK 1 Penabur Cirebon],
-      location: [Cirebon, West Java],
-      role: [Natural Sciences],
-      time: [2014--2017])   
-#point Finalist in the Programming Competition at ANFORCOM (Annual Informatics Competition) 2017, hosted by Diponegoro University, Semarang.  
-#point Table tennis athlete – reached the semi-finals at POPKOT (Pekan Olahraga Pelajar Tingkat Kota) in 2016.  
-#point Actively involved in student committees for various school events, including:
-Folklore Drama Festival (2015 & 2016), Science Week (2015), Shiki Matsuri Hanami Japanese Festival (2016),
-Student Introduction Program (2016), "Live In" community immersion program in Muntilan (2016)
-])
 
 #section-block(
   [Publications],
   [
     #publication-heading(
-      detail: [Murniadi, Aaron Purnomo (2022) "Waktu intuitif (durasi) sebagai dasar adanya kehendak bebas manusia menurut Henri Bergson." Driyarkara Jurnal Filsafat, 42 (2): 5. pp. 81–91. ISSN 2809-9516],
+      detail: [Murniadi, Aaron Purnomo (2022) "Waktu intuitif (durasi) sebagai dasar adanya kehendak bebas manusia menurut Henri Bergson." Driyarkara Jurnal Filsafat, 42 (2): 5. pp. 81--91. ISSN 2809-9516],
       year: [2022]
     )
     #publication-heading(
@@ -155,13 +152,37 @@ Student Introduction Program (2016), "Live In" community immersion program in Mu
   ]
 )
 
+#section-block(
+  [Blog],
+  [
+    #publication-heading(
+      detail: [#link("https://aaron-pm.bearblog.dev/")[https://aaron-pm.bearblog.dev/]],
+    )
+  ]
+)
+
+
+#section-block([Education],
+  [#edu-heading(
+      department: [SMAK 1 Penabur Cirebon],
+      location: [Cirebon, West Java],
+      role: [Natural Sciences],
+      time: [2014--2017])   
+#point Finalist in the Programming Competition at ANFORCOM (Annual Informatics Competition) 2017, hosted by Diponegoro University, Semarang.  
+#point Table tennis athlete, reached the semi-finals at POPKOT (Pekan Olahraga Pelajar Tingkat Kota) in 2016.  
+#point Actively involved in student committees for various school events, including:
+Folklore Drama Festival (2015 & 2016), Science Week (2015), Shiki Matsuri Hanami Japanese Festival (2016),
+Student Introduction Program (2016), "Live In" community immersion program in Muntilan (2016)
+])
+
+
+
 #v(1fr)
 
 #grid(
     columns: (3fr,4fr, 3fr),
     align: (left, center, right),
-    [],[“It is not the strongest of the species that survives, nor the most intelligent;
-it is the one most adaptable to change.” — _Charles Darwin_],[]
+    [],[“It is not the strongest of the species that survives, nor the most intelligent; it is the one most adaptable to change.” — _Charles Darwin_],[]
   )
   
 #v(2fr)
