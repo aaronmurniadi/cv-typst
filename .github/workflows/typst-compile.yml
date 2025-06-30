@@ -8,11 +8,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       
-      - name: Compile Typst Files
-        uses: ammar-ahmed22/compile-typst-action@v1
+      - name: Typst
+        uses: lvignoli/typst-action@main
         with:
-          source_paths: 'aaron_murniadi_cv.typ'
-          output_paths: 'aaron_murniadi_cv.pdf'
+          source_file: |
+            aaron_murniadi_cv.typ
       
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
