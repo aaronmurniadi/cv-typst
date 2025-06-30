@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for creating releases
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -22,28 +24,11 @@ jobs:
         with:
           name: aaron_murniadi_cv.pdf
           path: aaron_murniadi_cv.pdf
-      
+
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}
-          release_name: Automated build v${{ github.run_number }}
-          draft: false
-          prerelease: false
-      
-      - name: Set upload_url as an environment variable
-        run: echo "UPLOAD_URL=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
-      
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ env.UPLOAD_URL }} 
-          asset_path: aaron_murniadi_cv.pdf
-          asset_name: aaron_murniadi_cv.pdf
-          asset_content_type: application/pdf
+          name: Automated build v${{ github.run_number }}
+          files: aaron_murniadi_cv.pdf
+          generate_release_notes: true
