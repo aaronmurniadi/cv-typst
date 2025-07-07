@@ -69,17 +69,7 @@
   (+62) 881 535 9522, Indonesia, Jakarta
 ])
 
-I have hands-on experience in Quality Assurance (QA) Software Testing,
-both manual and automated, with a strong focus on delivering reliable
-and well-tested software. In the field of cybersecurity, I've
-independently discovered, documented, and reported two significant
-security vulnerabilities affecting both national and international
-websites. Technology, programming, and software development have been
-long-standing passions of mine—interests I continue to pursue both
-professionally and personally. Outside of work, I actively advocate for
-the use of Free and Open Source Software (FOSS) and support the principles
-of Open Science and the importance of accessible knowledge and transparent
-innovation.
+I am a Quality Assurance (QA) Software Testing professional with extensive hands-on experience in both manual and automated testing, focused on delivering reliable and well-tested software solutions. In cybersecurity, I have independently discovered, documented, and reported two significant security vulnerabilities affecting national and international websites. Technology, programming, and software development have been long-standing passions that I continue to pursue both professionally and personally. I actively advocate for Free and Open Source Software (FOSS) and support Open Science principles, promoting accessible knowledge and transparent innovation.
 
 #h(1em)
 
@@ -91,28 +81,23 @@ innovation.
       time: [December 2021--_Present_],
     )
 
-    _*Full time as Software Engineer 2, QA*_ #h(1fr) #text(size: 0.8em)[September 2024--]\
-    #point Quickly integrated into a newly restructured team, demonstrating adaptability and collaboration.
+    _*Software Engineer 2, QA (Full-time)*_ #h(1fr) #text(size: 0.8em)[September 2024--Present]\
+    #point Seamlessly integrated into a newly restructured team, demonstrating strong adaptability and collaboration skills.
     #point Initiated and planned the migration of Karate projects from Maven to Gradle for improved build performance and maintainability.
     #point Appointed as QA Driver App Release Manager, coordinating smoke testing for new driver app releases across three teams to ensure quality and timely delivery.
-    #point Began transitioning to Developer role through mentoring/training and skill development.
+    #point Transitioning to Developer role through mentoring, training, and skill development.
 
-    _*Full time as Software Engineer 1, QA*_ #h(1fr) #text(size: 0.8em)[January 2023--August 2024]\
-    #point Given responsibility as a _Hybrid Tester_, proficient in both manual and automated testing, with prioritization driven by business objectives.
-    #point Designed, developed, and maintained automated regression test suites in Java.
-    Covered API testing using #link("https://rest-assured.io/")[REST Assured]
-    and #link("https://square.github.io/okhttp/")[OkHttp],
-    front-end web testing with #link("https://www.selenium.dev/documentation/webdriver/")[Selenium WebDriver],
-    and Android application testing via #link("https://github.com/appium/appium-flutter-driver")[Appium Flutter Driver].
-    All tests were using #link("https://github.com/cucumber/cucumber-jvm")[Cucumber-JVM] framework.
-    #point Become the primary contributor in integrating #link("https://github.com/karatelabs/karate")[Karate DSL] into the shared automation suite adopted by the QA team.
-    #point Led the design and implementation of an API to Scenario (ATS) mapping system to establish traceability between automated tests and backend APIs. This initiative included the development of a new API service written in _Go_.
+    _*Software Engineer 1, QA (Full-time)*_ #h(1fr) #text(size: 0.8em)[January 2023--August 2024]\
+    #point Served as a _Hybrid Tester_, proficient in both manual and automated testing, with prioritization driven by business objectives.
+    #point Designed, developed, and maintained automated regression test suites in Java, covering API testing using #link("https://rest-assured.io/")[REST Assured] and #link("https://square.github.io/okhttp/")[OkHttp], front-end web testing with #link("https://www.selenium.dev/documentation/webdriver/")[Selenium WebDriver], and Android application testing via #link("https://github.com/appium/appium-flutter-driver")[Appium Flutter Driver]. All tests utilized the #link("https://github.com/cucumber/cucumber-jvm")[Cucumber-JVM] framework.
+    #point Became the primary contributor in integrating #link("https://github.com/karatelabs/karate")[Karate DSL] into the shared automation suite adopted by the QA team.
+    #point Led the design and implementation of an API to Scenario (ATS) mapping system to establish traceability between automated tests and backend APIs, including the development of a new API service written in _Go_.
     #point Contributed to the integration of OpenAPI-generated API clients—used in production—into the QA automation framework to improve testing fidelity.
 
-    _*Internship as Software Tester*_ #h(1fr) #text(size: 0.8em)[December 2021--December 2022]\
+    _*Software Tester (Internship)*_ #h(1fr) #text(size: 0.8em)[December 2021--December 2022]\
     #point Executed manual testing activities on new product features and functional enhancements to ensure quality and adherence to requirements.
     #point Authored and managed test scenarios using #link("https://studio.cucumber.io/")[Cucumber Studio].
-    #point Performed smoke tests in Production environment to validate the stability of newly deployed features.
+    #point Performed smoke tests in production environment to validate the stability of newly deployed features.
     #point Created a Python-based automation project to support manual testers through semi-automation, leveraging the #link("https://github.com/behave/behave")[Behave] framework.
   ],
 )
@@ -121,7 +106,7 @@ innovation.
   [Publications],
   [
     #publication-heading(
-      detail: [Murniadi, Aaron Purnomo (2022) "Waktu intuitif (durasi) sebagai dasar adanya kehendak bebas manusia menurut Henri Bergson." Driyarkara Jurnal Filsafat, 42 (2): 5. pp. 81--91. ISSN 2809-9516],
+      detail: [Murniadi, Aaron Purnomo (2022) "Waktu Intuitif (durasi) sebagai Dasar Adanya Kehendak Bebas Manusia Menurut Henri Bergson." Driyarkara Jurnal Filsafat, 42 (2): 5. pp. 81--91. ISSN 2809-9516],
       year: [2022],
     )
     #publication-heading(
@@ -135,7 +120,7 @@ innovation.
   [My Blog],
   [
     #publication-heading(
-      detail: [#link("https://aaron-pm.bearblog.dev/")[https://aaron-pm.bearblog.dev/] "This blog serves as a platform for me to share my ideas, projects, and reflections—covering everything from technical insights to philosophical musings."],
+      detail: [#link("https://aaron-pm.bearblog.dev/")[https://aaron-pm.bearblog.dev/] "This blog serves as a platform for sharing my ideas, projects, and reflections—covering everything from technical insights to philosophical musings."],
       year: [],
     )
   ],
@@ -149,11 +134,9 @@ innovation.
       role: [Natural Sciences],
       time: [2014--2017],
     )
-    #point Finalist in ANFORCOM (Annual Informatics Competition) 2017, at Diponegoro University, Semarang.
+    #point Finalist in ANFORCOM (Annual Informatics Competition) 2017 at Diponegoro University, Semarang.
     #point Semi-finalist at POPKOT (Pekan Olahraga Pelajar Tingkat Kota) 2016 in Table Tennis.
-    #point Actively involved in student committees for various school events, including:
-    Folklore Drama Festival (2015 & 2016), Science Week (2015), Shiki Matsuri Hanami Japanese Festival (2016),
-    Student Introduction Program (2016), "Live In" community immersion program in Muntilan (2016)
+    #point Actively involved in student committees for various school events, including: Folklore Drama Festival (2015 & 2016), Science Week (2015), Shiki Matsuri Hanami Japanese Festival (2016), Student Introduction Program (2016), "Live In" community immersion program in Muntilan (2016).
   ],
 )
 
