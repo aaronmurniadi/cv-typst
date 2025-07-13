@@ -86,6 +86,7 @@ I am a Quality Assurance (QA) Software Testing professional with extensive hands
     #point Initiated and planned the migration of Karate projects from Maven to Gradle for improved build performance and maintainability.
     #point Appointed as QA Driver App Release Manager, coordinating smoke testing for new driver app releases across three teams to ensure quality and timely delivery.
     #point Transitioning to Developer role through mentoring, training, and skill development.
+    #point Developed a Multi-scale Template Matching solution using #link("https://opencv.org/")[OpenCV] to locate UI elements from screenshots based on reference samples
 
     _*Software Engineer 1, QA (Full-time)*_ #h(1fr) #text(size: 0.8em)[January 2023--August 2024]\
     #point Served as a _Hybrid Tester_, proficient in both manual and automated testing, with prioritization driven by business objectives.
