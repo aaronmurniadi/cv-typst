@@ -31,7 +31,7 @@
 
 #let publication-heading(detail: [], year: []) = [
   #grid(
-    columns: (5fr, 0.5fr),
+    columns: (5fr, 0.75fr),
     align: (left, right),
     detail, year,
   )
@@ -60,16 +60,20 @@
   number-width: "proportional",
 )
 
-#set page(paper: "a4", margin: 0.95in, header: [#text(
+#set page(paper: "a4", margin: 0.95in, footer: [#text(
     style: "italic",
   )[Last updated: #today]#h(1fr)])
 
-#header(name: [Aaron P. Murniadi], contact: [
-  #link("mailto:aaronmurniadi@gmail.com")[aaronmurniadi\@gmail.com] \
-  (+62) 881 535 9522, Indonesia, Jakarta
-])
+#header(
+  name: [Aaron P. Murniadi],
+  contact: [
+    #link("mailto:aaronmurniadi@gmail.com")[_aaronmurniadi\@gmail.com_] \
+    (+62) 881 535 9522, Indonesia, Jakarta \
+    #link("https://www.linkedin.com/in/aaronmurniadi/")[LinkedIn] | #link("https://github.com/aaronmurniadi")[GitHub] | #link("https://aaron-pm.bearblog.dev/")[My Blog]
+  ],
+)
 
-I am a Quality Assurance (QA) Software Testing professional with extensive hands-on experience in both manual and automated testing, focused on delivering reliable and well-tested software solutions. In cybersecurity, I have independently discovered, documented, and reported two significant security vulnerabilities affecting national and international websites. Technology, programming, and software development have been long-standing passions that I continue to pursue both professionally and personally. I actively advocate for Free and Open Source Software (FOSS) and support Open Science principles, promoting accessible knowledge and transparent innovation.
+Professional QA Software Engineer with expertise in both manual and automated testing, specializing in comprehensive test automation frameworks and cross-platform application testing. Additional track record in cybersecurity research with two independently discovered vulnerabilities in high-profile systems. Currently transitioning from QA to Developer role while maintaining deep expertise in quality assurance methodologies. Passionate advocate for FOSS principles and open science, with published philosophical research bridging technology and humanities.
 
 #h(1em)
 
@@ -104,40 +108,57 @@ I am a Quality Assurance (QA) Software Testing professional with extensive hands
 )
 
 #section-block(
+  [Technical Skills],
+  [
+    *Programming Languages:* #link("https://www.oracle.com/java/")[Java], #link("https://go.dev/")[Go], #link("https://www.python.org/")[Python], \
+    *Testing Frameworks:* #link("https://www.selenium.dev/")[Selenium], #link("https://rest-assured.io/")[REST Assured], #link("https://square.github.io/okhttp/")[OkHttp], #link("https://github.com/cucumber/cucumber-jvm")[Cucumber-JVM], #link("https://github.com/karatelabs/karate")[Karate DSL], #link("https://github.com/behave/behave")[Behave], #link("https://appium.io/")[Appium] \
+    *Development Tools:* #link("https://maven.apache.org/")[Maven], #link("https://gradle.org/")[Gradle], #link("https://opencv.org/")[OpenCV], #link("https://git-scm.com/")[Git], #link("https://swagger.io/specification/")[OpenAPI], #link("https://www.atlassian.com/software/bamboo")[Bamboo] \
+    *Testing Specialties:* API Testing, Web Automation, Mobile Testing \
+    *Methodologies:* #link("https://agilemanifesto.org/")[Agile], Test-Driven Development \
+    *Additional:* Cybersecurity Research, FOSS Advocacy, Technical Writing
+  ],
+)
+
+#section-block(
+  [Security Research],
+  [
+    #publication-heading(
+      detail: [*Vulnerability Disclosure Program Contributions* \ Independently discovered and responsibly disclosed two critical security vulnerabilities affecting national and international web applications, demonstrating strong ethical hacking capabilities and commitment to cybersecurity best practices.],
+      year: [2022--2023],
+    )
+  ],
+)
+
+#section-block(
   [Publications],
   [
     #publication-heading(
-      detail: [Murniadi, Aaron Purnomo (2022) "Waktu Intuitif (durasi) sebagai Dasar Adanya Kehendak Bebas Manusia Menurut Henri Bergson." Driyarkara Jurnal Filsafat, 42 (2): 5. pp. 81--91. ISSN 2809-9516],
+      detail: [Murniadi, Aaron Purnomo (2022) "Waktu Intuitif (durasi) sebagai Dasar Adanya Kehendak Bebas Manusia Menurut Henri Bergson." #link("https://ejournal.driyarkara.ac.id/index.php/driyarkara")[_Driyarkara Jurnal Filsafat_], 42 (2): 5. pp. 81--91. ISSN 2809-9516],
       year: [2022],
     )
     #publication-heading(
-      detail: ["Ranting Mencari Jalan ke Akar", Mardiatmadja, SJ, B.S. and Whisnu Bintoro, CICM, Dhaniel (2020) "EKLESIOLOGI Langkah demi Langkah. Sudut-Sudut Hening Ziarah Gereja". PT Kanisius, Yogyakarta. ISBN 978-979-21-6665-1],
+      detail: ["Ranting Mencari Jalan ke Akar", Mardiatmadja, SJ, B.S. and Whisnu Bintoro, CICM, Dhaniel (2020) "EKLESIOLOGI Langkah demi Langkah. Sudut-Sudut Hening Ziarah Gereja". #link("https://www.kanisius.co.id/")[PT Kanisius], Yogyakarta. ISBN 978-979-21-6665-1],
       year: [2020],
     )
   ],
 )
 
 #section-block(
-  [My Blog],
-  [
-    #publication-heading(
-      detail: [#link("https://aaron-pm.bearblog.dev/")[https://aaron-pm.bearblog.dev/] "This blog serves as a platform for sharing my ideas, projects, and reflections—covering everything from technical insights to philosophical musings."],
-      year: [],
-    )
-  ],
-)
-
-#section-block(
-  [Education],
+  [Education &\ Achievements],
   [#edu-heading(
       department: [SMAK 1 Penabur Cirebon],
       location: [Cirebon, West Java],
-      role: [Natural Sciences],
+      role: [Natural Sciences Concentration],
       time: [2014--2017],
     )
-    #point Finalist in ANFORCOM (Annual Informatics Competition) 2017 at Diponegoro University, Semarang.
-    #point Semi-finalist at POPKOT (Pekan Olahraga Pelajar Tingkat Kota) 2016 in Table Tennis.
-    #point Actively involved in student committees for various school events, including: Folklore Drama Festival (2015 & 2016), Science Week (2015), Shiki Matsuri Hanami Japanese Festival (2016), Student Introduction Program (2016), "Live In" community immersion program in Muntilan (2016).
+
+    *Academic Competitions:*
+    #point Finalist in ANFORCOM (Annual Informatics Competition) 2017 at #link("https://www.undip.ac.id/")[Diponegoro University], Semarang—demonstrating early programming and problem-solving excellence.
+    #point Semi-finalist at POPKOT (Pekan Olahraga Pelajar Tingkat Kota) 2016 in Table Tennis, showcasing competitive excellence and sportmanship.
+
+    *Leadership & Community Engagement:*
+    #point Student committee leadership across 6 major school events (2015-2016), including cultural festivals, academic programs, and community outreach initiatives.
+    #point Participated in "Live In" community immersion program in Muntilan (2016), developing cultural sensitivity and social awareness through direct community engagement.
   ],
 )
 
