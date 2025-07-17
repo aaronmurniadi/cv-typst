@@ -31,7 +31,7 @@
 
 #let publication-heading(detail: [], year: []) = [
   #grid(
-    columns: (5fr, 0.75fr),
+    columns: (5fr, 1fr),
     align: (left, right),
     detail, year,
   )
@@ -62,7 +62,7 @@
 
 #set page(paper: "a4", margin: 0.95in, footer: [#text(
     style: "italic",
-  )[Last updated: #today]#h(1fr)])
+  )[#h(1fr) Last updated: #today #h(1fr)] #context [\[#counter(page).display() / #counter(page).final().first()]\]])
 
 #header(
   name: [Aaron P. Murniadi],
@@ -85,14 +85,14 @@ Professional QA Software Engineer with expertise in both manual and automated te
       time: [December 2021--_Present_],
     )
 
-    _*Software Engineer 2, QA (Full-time)*_ #h(1fr) #text(size: 0.8em)[September 2024--Present]\
+    _*Software Engineer 2, QA*_ #h(1fr) #text(size: 0.8em)[September 2024--Present]\
     #point Seamlessly integrated into a newly restructured team, demonstrating strong adaptability and collaboration skills.
     #point Initiated and planned the migration of Karate projects from Maven to Gradle for improved build performance and maintainability.
     #point Appointed as QA Driver App Release Manager, coordinating smoke testing for new driver app releases across three teams to ensure quality and timely delivery.
     #point Transitioning to Developer role through mentoring, training, and skill development.
     #point Developed a Multi-scale Template Matching solution using #link("https://opencv.org/")[OpenCV] to locate UI elements from screenshots based on reference samples
 
-    _*Software Engineer 1, QA (Full-time)*_ #h(1fr) #text(size: 0.8em)[January 2023--August 2024]\
+    _*Software Engineer 1, QA*_ #h(1fr) #text(size: 0.8em)[January 2023--August 2024]\
     #point Served as a _Hybrid Tester_, proficient in both manual and automated testing, with prioritization driven by business objectives.
     #point Designed, developed, and maintained automated regression test suites in Java, covering API testing using #link("https://rest-assured.io/")[REST Assured] and #link("https://square.github.io/okhttp/")[OkHttp], front-end web testing with #link("https://www.selenium.dev/documentation/webdriver/")[Selenium WebDriver], and Android application testing via #link("https://github.com/appium/appium-flutter-driver")[Appium Flutter Driver]. All tests utilized the #link("https://github.com/cucumber/cucumber-jvm")[Cucumber-JVM] framework.
     #point Became the primary contributor in integrating #link("https://github.com/karatelabs/karate")[Karate DSL] into the shared automation suite adopted by the QA team.
