@@ -61,7 +61,7 @@
 )
 
 #set page(paper: "a4", margin: 0.95in, footer: [#text(
-    style: "italic",
+    style: "italic", size: 0.8em
   )[#h(1fr) Last updated: #today #h(1fr)] #context [\[#counter(page).display() / #counter(page).final().first()]\]])
 
 #header(
