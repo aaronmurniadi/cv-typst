@@ -1,0 +1,8 @@
+  
+{
+  "editor.minimap.enabled": false,
+  "tinymist.formatterMode": "typstyle",
+  "[typst]": {
+    "editor.formatOnSave": true,
+  }
+}
