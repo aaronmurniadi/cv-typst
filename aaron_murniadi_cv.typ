@@ -69,7 +69,7 @@
   contact: [
     #link("mailto:aaronmurniadi@gmail.com")[_aaronmurniadi\@gmail.com_] \
     (+62) 881 535 9522, Indonesia, Jakarta \
-    #link("https://www.linkedin.com/in/aaronmurniadi/")[LinkedIn] | #link("https://github.com/aaronmurniadi")[GitHub] | #link("https://aaron-pm.bearblog.dev/")[My Blog]
+    #link("https://www.linkedin.com/in/aaronmurniadi/")[LinkedIn] | #link("https://github.com/aaronmurniadi")[GitHub] | #link("https://aaronmurniadi.github.io/")[My Blog]
   ],
 )
 
